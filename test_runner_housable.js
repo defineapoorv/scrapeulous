@@ -94,7 +94,7 @@ class TestRunner {
 }
 
 
-axios.post('https://protected-peak-85531.herokuapp.com/get_100_addresses', { county: 'SAN JOAQUIN', limit:100 } )
+axios.post('https://housbot.herokuapp.com/get_10000_addresses', { county: 'SAN JOAQUIN', limit:100 } )
   .then(function (response) {
     addreses = response.data;
     console.log(addreses)
@@ -132,7 +132,7 @@ axios.post('https://protected-peak-85531.herokuapp.com/get_100_addresses', { cou
       console.dir(final_data, { depth: null });
 
 
-      axios.post('https://protected-peak-85531.herokuapp.com/save_100_addresses', { 'final_data':final_data })
+      axios.post('https://protected-peak-85531.herokuapp.com/save_100_addresses/', { 'final_data':final_data })
       .then(function (response) {
         console.log(response)
       })
